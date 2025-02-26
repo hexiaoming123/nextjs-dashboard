@@ -1,5 +1,15 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts'; //引入字体
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Acme Dashboard',
+    default: 'Acme Dashboard',
+  },
+  description: 'The official Next.js Course Dashboard, built with App Router.',
+  //https://next-learn-dashboard.vercel.sh
+  metadataBase: new URL('http://localhost:3000'),
+};
 export default function RootLayout({
   children,
 }: {
@@ -8,10 +18,6 @@ export default function RootLayout({
   //使用字体
   return (
     <html lang="en">
-      <head>
-        <meta name="description" content="你的应用描述" />
-        <title>我的 Next.js 应用</title>
-      </head>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );

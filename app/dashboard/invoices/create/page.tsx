@@ -1,7 +1,11 @@
 import Form from '@/app/ui/invoices/create-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchCustomers } from '@/app/lib/data';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'create | Invoices',
+};
 export default async function Page() {
   const customers = await fetchCustomers();
   //breadcrumbs一个面包屑导航组件，帮助用户了解当前页面在网站中的位置。比如从“发票”页面到“创建发票”页面的导航
