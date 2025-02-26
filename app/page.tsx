@@ -7,13 +7,13 @@ import Image from 'next/image';
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
-      <h1 className="text-blue-500">I'm blue!</h1>
+      <h1 className="text-blue-500">I&apos;m blue!</h1>
       <div className={styles.shape} />
       <Image
         src="/hero-desktop.png"
         width={1000}
         height={760}
-        className="hidden md:block"//adfa 
+        className="hidden md:block" //adfa
         alt="Screenshots of the dashboard project showing desktop version"
       />
       <Image
